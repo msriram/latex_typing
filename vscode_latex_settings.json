@@ -1,0 +1,58 @@
+{
+    "update.mode": "none",
+    "latex-workshop.view.pdf.viewer": "tab",
+    "latex-workshop.latex.autoClean.run":"onBuilt",
+    "latex-workshop.latex.clean.fileTypes":[
+        "*.aux",
+        "*.bbl",
+        "*.blg",
+        "*.idx",
+        "*.ind",
+        "*.lof",
+        "*.lot",
+        "*.out",
+        "*.toc",
+        "*.acn",
+        "*.acr",
+        "*.alg",
+        "*.glg",
+        "*.glo",
+        "*.gls",
+        "*.ist",
+        "*.xdv",
+        "*.fls",
+        "*.log",
+        "*.fdb_latexmk",
+        "*.gz"
+    ],
+    "latex-workshop.latex.tools": [
+      {
+          "name": "latexmk",
+          "command": "latexmk",
+          "args": [
+              "-xelatex",
+              "-f",
+              "-synctex=1",
+              "-interaction=nonstopmode",
+              "-file-line-error",
+              "%DOC%"
+          ]
+      }
+    ],
+    "window.zoomLevel": 2,
+    "editor.wordWrapColumn": 58,
+    "workbench.colorTheme": "Monokai",
+    "workbench.colorCustomizations": {
+        "editor.selectionBackground": "#057715",
+        "editor.selectionHighlightBackground": "#838505",
+        "editor.findMatchBackground": "#850550",
+        "editor.findMatchHighlightBackground": "#4b0585",
+        "editor.findRangeHighlightBackground": "#855d05",
+        "editor.inactiveSelectionBackground": "#4d4e03"
+    },
+    "editor.tokenColorCustomizations": {
+        "comments": "#c2c1c1"
+    },
+    "git.autofetch": true,
+    "latex-workshop.message.update.show": false
+}
