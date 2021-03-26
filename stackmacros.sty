@@ -153,17 +153,21 @@
 }
 
 % Slokas with 1 lines
-\newcommand{\sloka}[1]{
+\newcommand{\slokal}[1]{\sloka{#1}{\LARGE}}
+\newcommand{\slokah}[1]{\sloka{#1}{\Huge}}
+\newcommand{\sloka}[2]{
         \begin{quote}
-            \LARGE
+            #2
             #1 \\ \vspc
         \end{quote}
 }
 
 % Slokas with 4 lines
-\newcommand{\slokas}[4]{
+\newcommand{\slokasl}[4]{\slokas{#1}{#2}{#3}{#4}{\LARGE}}
+\newcommand{\slokash}[4]{\slokas{#1}{#2}{#3}{#4}{\Huge}}
+\newcommand{\slokas}[5]{
     \begin{quote}
-        \LARGE
+        #5
         #1 \\ \vspc \vspc
         #2 \\ \vspc \vspc \vspc
         #3 \\ \vspc \vspc
@@ -173,9 +177,11 @@
 }
 
 % Slokas with 5 lines
-\newcommand{\slokad}[5]{
+\newcommand{\slokadl}[5]{\slokad{#1}{#2}{#3}{#4}{#5}{\LARGE}}
+\newcommand{\slokadh}[5]{\slokad{#1}{#2}{#3}{#4}{#5}{\Huge}}
+\newcommand{\slokad}[6]{
     \begin{quote} 
-        \LARGE
+        #6
         \U{#1} \\ \vspc \vspc \vspc
         #2 \\ \vspc \vspc
         #3 \\ \vspc \vspc \vspc
