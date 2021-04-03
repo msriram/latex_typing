@@ -30,7 +30,7 @@
 % option to add vertical spacing
 \newcommand{\vspc}[1][2pt]{\rule[\normalbaselineskip]{0pt}{4pt}}
 \newcommand{\hspc}{\space \space}
-\newcommand{\hdspc}{-\space}
+\newcommand{\dash}{\fontdimen2\font=0.4em- }
 \newcommand{\tutorialtable}{
     \begin{table}[h!]
         \begin{center}
@@ -174,11 +174,11 @@
 \newcommand{\slokas}[5]{
     \begin{quote}
         #5
-        \fontdimen2\font=1em
+        \fontdimen2\font=0.8em
         #1 \\ \vspc \vspc
         #2 \\ \vspc \vspc \vspc
         #3 \\ \vspc \vspc
-        #4 %|| \countr \space ||  % uncomment this to track sloka number
+        #4 ||\space\countr\space||  % uncomment this to track sloka number
         \\ \vspc \vspc \vspc
     \end{quote}
 }
@@ -190,11 +190,11 @@
     \begin{quote}
         #6
         \U{#1} \\ \vspc \vspc \vspc
-        \fontdimen2\font=1em
+        \fontdimen2\font=0.8em
         #2 \\ \vspc \vspc
         #3 \\ \vspc \vspc \vspc
         #4 \\ \vspc \vspc
-        #5 %|| \countr \space ||  %uncomment this to track sloka number
+        #5 ||\space\countr\space||  %uncomment this to track sloka number
         \\ \vspc \vspc \vspc
     \end{quote}
 }
