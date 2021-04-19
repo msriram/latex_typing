@@ -141,8 +141,9 @@
 \AtBeginEnvironment{quote}{\raggedright}
 
 % counter macros
+\newcounter{mycounter}
 \newcommand\countr{\addtocounter{mycounter}{1}\themycounter}
-
+\newcommand\resetcountr{\setcounter{mycounter}{0}}
 % tamil phonetics guide
 \newcommand{\phoneticsguide}{
 \newpage
