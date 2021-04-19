@@ -28,9 +28,13 @@
 \newcolumntype{L}[1]{>{\PreserveBackslash\raggedright}p{#1}}
 
 % option to add vertical spacing
-\newcommand{\vspc}[1][2pt]{\rule[\normalbaselineskip]{0pt}{4pt}}
+\newcommand{\novspace}{\vspace*{-1.5cm}}
+\newcommand{\vspc}[1][2pt]{\rule[\normalbaselineskip]{0pt}{2pt}}
+\newcommand{\sspc}[1][2pt]{\rule[\normalbaselineskip]{0pt}{5pt}}
+\newcommand{\dspc}[1][2pt]{\rule[\normalbaselineskip]{0pt}{12pt}}
 \newcommand{\hspc}{\space \space}
 \newcommand{\dash}{\fontdimen2\font=0.4em— }
+\newcommand{\dsh}{\fontdimen2\font=0.4em- }
 \newcommand{\tutorialtable}{
     \begin{table}[h!]
         \begin{center}
@@ -73,10 +77,10 @@
     
 \usepackage[
         a4paper,% other options: a3paper, a5paper, etc
-        left=0.5in,
+        left=0.4in,
         right=0.1in,
         top=0.8in,
-        bottom=0.8in,
+        bottom=0.6in,
 ]{geometry}
 \geometry{a4paper, portrait}
 \sloppy
@@ -190,47 +194,20 @@
 \newcommand{\dhh}{\x{dh}{•}}
 \newcommand{\Dh}{\x{Dh}{•}}
 
-% Slokas with 1 lines
-\newcommand{\slokal}[1]{\sloka{#1}{\LARGE}}
-\newcommand{\slokah}[1]{\sloka{#1}{\huge}}
-\newcommand{\sloka}[2]{
-        \begin{quote}
-            #2
-            #1 \\ \vspc
-        \end{quote}
-}
+% Variadic Macro for Slokas
+\newcount\linenum
+\newcommand{\GobbleListArg}[1]{\advance\linenum by 1 \\ \vspc \ifodd \number\linenum \dspc \else \sspc \fi #1\SlokaLine}
+\newcommand{\SlokaLine}{\csname @ifnextchar\endcsname\bgroup{\GobbleListArg}{ \space||\space\countr\space|| \\ \vspc \end{quote}}}
+\newcommand{\Sloka}[2]{#2 \fontdimen2\font=0.8em \linenum=1 \begin{quote} #1\SlokaLine}
+\newcommand{\SlokaHeader}[3]{#3 \BU{#1} \Sloka{#2}{#3}}
 
-% Slokas with 4 lines
-\newcommand{\slokasl}[4]{\slokas{#1}{#2}{#3}{#4}{\LARGE}}
-\newcommand{\slokash}[4]{\slokas{#1}{#2}{#3}{#4}{\huge}}
-\newcommand{\slokas}[5]{
-    \begin{quote}
-        #5
-        \fontdimen2\font=0.8em
-        #1 \\ \vspc \vspc
-        #2 \\ \vspc \vspc \vspc
-        #3 \\ \vspc \vspc
-        #4
-        \fontdimen2\font=0.3em
-        ||\space\countr\space||  % uncomment this to track sloka number
-        \\ \vspc \vspc \vspc
-    \end{quote}
-}
+\newcommand{\SlokaLarge}[1]{\Sloka{#1}{\LARGE}}
+\newcommand{\SlokaHuge}[1]{\Sloka{#1}{\huge}}
+\newcommand{\SlokaHeaderLarge}[2]{\SlokaHeader{#1}{#2}{\LARGE}}
+\newcommand{\SlokaHeaderHuge}[2]{\SlokaHeader{#1}{#2}{\huge}}
 
-% Slokas with 5 lines
-\newcommand{\slokadl}[5]{\slokad{#1}{#2}{#3}{#4}{#5}{\LARGE}}
-\newcommand{\slokadh}[5]{\slokad{#1}{#2}{#3}{#4}{#5}{\huge}}
-\newcommand{\slokad}[6]{
-    \begin{quote}
-        #6
-        \U{#1} \\ \vspc \vspc \vspc
-        \fontdimen2\font=0.8em
-        #2 \\ \vspc \vspc
-        #3 \\ \vspc \vspc \vspc
-        #4 \\ \vspc \vspc
-        #5
-        \fontdimen2\font=0.3em
-        ||\space\countr\space||  %uncomment this to track sloka number
-        \\ \vspc \vspc \vspc
-    \end{quote}
-}
+\newcommand{\SlokaLineStray}{\csname @ifnextchar\endcsname\bgroup{\GobbleListArg}{ \\ \vspc \end{quote}}}
+\newcommand{\SlokaStray}[2]{#2 \fontdimen2\font=0.8em \linenum=1 \begin{quote} #1\SlokaLineStray}
+\newcommand{\SlokaStrayLarge}[1]{\SlokaStray{#1}{\LARGE}}
+\newcommand{\SlokaStrayHuge}[1]{\SlokaStray{#1}{\huge}}
+
