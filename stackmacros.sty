@@ -197,7 +197,7 @@
 % Variadic Macro for Slokas
 \newcount\linenum
 \newcommand{\GobbleListArg}[1]{\advance\linenum by 1 \\ \vspc \ifodd \number\linenum \dspc \else \sspc \fi #1\SlokaLine}
-\newcommand{\SlokaLine}{\csname @ifnextchar\endcsname\bgroup{\GobbleListArg}{ \space||\space\countr\space|| \\ \vspc \end{quote}}}
+\newcommand{\SlokaLine}{\csname @ifnextchar\endcsname\bgroup{\GobbleListArg}{\space \fontdimen2\font=0.3em ||\space\countr\space|| \\ \vspc \end{quote}}}
 \newcommand{\Sloka}[2]{#2 \fontdimen2\font=0.8em \linenum=1 \begin{quote} #1\SlokaLine}
 \newcommand{\SlokaHeader}[3]{#3 \BU{#1} \Sloka{#2}{#3}}
 
