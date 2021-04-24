@@ -1,0 +1,258 @@
+% \usepackage{amsmath,stackengine,csquotes}
+% \setlength{\parskip}{\baselineskip}%
+% \setlength{\parindent}{0pt}%
+
+% \stackMath
+% \setstackgap{S}{1.5pt}
+
+% % options to print text above or below a character
+% \newcommand{\n}{\newline}
+% \newcommand{\U}[1]{\underline{#1}}
+% \newcommand{\B}[1]{\textbf{#1}}
+% \newcommand{\BU}[1]{\underline{\textbf{#1}}}
+% \newcommand{\y}[2]{\textbf{\stackunder{\stackon{\text{#1}}{\scriptstyle \textbf{#2}}}{}}}
+% \newcommand{\x}[2]{\textbf{\stackunder{\stackon{\text{#1}}{}}{\scriptstyle \textbf{#2}}}}
+% \newcommand{\Y}[2]{\textbf{\stackunder{\stackon{\U{\text{#1}}}{\scriptstyle \textbf{#2}}}{}}}
+% \newcommand{\X}[2]{\stackunder{\stackon{\U{\text{#1}}}{}}{\scriptstyle \textbf{#2}}}
+% \newcommand{\xy}[3]{\stackunder{\stackon{\text{#1}}{\scriptstyle \textbf{#2}}}{\stackunder{}{\scriptstyle \textbf{#3}}}}
+% % \newcommand{\gum}{\footnotesize{[\,\y{கு}{3}ம் /\,\y{கு}{3}{ஸ்}\,]}
+% \newcommand{\F}[2]{{\fontfamily{#2}\selectfont{#1}}}
+% \newcommand{\eng}[1]{\F{\large #1}{lmr}}
+
+
+% %table alignment macros
+% \usepackage{array}
+% \newcommand{\PreserveBackslash}[1]{\let\temp=\\#1\let\\=\temp}
+% \newcolumntype{C}[1]{>{\PreserveBackslash\centering}p{#1}}
+% \newcolumntype{R}[1]{>{\PreserveBackslash\raggedleft}p{#1}}
+% \newcolumntype{L}[1]{>{\PreserveBackslash\raggedright}p{#1}}
+
+% % option to add vertical spacing
+% \newcommand{\novspace}{\vspace*{-2.0cm}}
+% \newcommand{\vspc}[1][2pt]{\rule[\normalbaselineskip]{0pt}{2pt}}
+% \newcommand{\sspc}[1][2pt]{\rule[\normalbaselineskip]{0pt}{5pt}}
+% \newcommand{\dspc}[1][2pt]{\rule[\normalbaselineskip]{0pt}{12pt}}
+% \newcommand{\hspc}{\space \space}
+% \newcommand{\dash}{\fontdimen2\font=0.4em— }
+% \newcommand{\dsh}{\fontdimen2\font=0.4em- }
+% \newcommand{\tutorialtable}{
+%     \begin{table}[h!]
+%         \begin{center}
+%             \caption{Tamil Typing Tutorial.}
+%             \label{tab:table1}
+%             \begin{tabular}{rlcll} % <-- Alignments: 1st column left, 2nd middle and 3rd right, with vertical lines in between
+%             \textbf{Output} & \textbf{-} & \textbf{Latex Coding}\\
+%             \hline
+%             \U{க} & - & $\backslash$U\{க\} \\[2pt]
+%             \x{க}{.}  & - & $\backslash$x\{க\}\{.\} \\[2pt]
+%             \X{க}{.}  & - & $\backslash$X\{க\}\{.\} \\[5pt]
+%             \y{க}{l}  & - & $\backslash$y\{க\}\{l\} \\[2pt]
+%             \y{க}{ll}  & - & $\backslash$y\{க\}\{ll\} \\[2pt]
+%             \Y{க}{2}  &-  & $\backslash$Y\{க\}\{2\} \\[2pt]
+%             \y{க}{2\,l} & -  & $\backslash$y\{க\}\{2$\backslash$,l\} \\[2pt]
+%             \y{க}{2\,ll}  &-  & $\backslash$y\{க\}\{2$\backslash$,ll\} \\[2pt]
+%             \Y{க}{3}  &-  & $\backslash$Y\{க\}\{3\} \\[2pt]
+%             \y{க}{3\,l}  &-  & $\backslash$y\{க\}\{3$\backslash$,l\} \\[2pt]
+%             \y{க}{3\,ll}  &-  & $\backslash$y\{க\}\{3$\backslash$,ll\} \\[2pt]
+%             \Y{க}{4}  &-  & $\backslash$Y\{க\}\{4\} \\[2pt]
+%             \y{க}{4\,l} & -  & $\backslash$y\{க\}\{4$\backslash$,l\} \\[2pt]
+%             \y{க}{4\,ll} & -  & $\backslash$y\{க\}\{4$\backslash$,dll\} \\
+%             \y{க}{2}  &-  & $\backslash$y\{க\}\{2\} \\[2pt]
+%             \y{க}{3}  &-  & $\backslash$y\{க\}\{3\} \\[2pt]    
+%             \y{க}{4}  &-  & $\backslash$y\{க\}\{4\} \\[2pt]   
+%             % ऽ & - & $\backslash$Sx \\ [2pt]
+%             % ऽऽ & - & $\backslash$SSx \\ [2pt]
+%             \end{tabular}
+%         \end{center}
+%     \end{table}
+% }
+
+% % set margins
+% % \addtolength{\oddsidemargin}{1.5in}
+% % \addtolength{\evensidemargin}{1.5in}
+% % \addtolength{\textwidth}{1.75in}
+
+% % \addtolength{\textheight}{1.75in}
+% % \setlength{\parindent}{0pt}
+    
+% \usepackage[
+%         a4paper,% other options: a3paper, a5paper, etc
+%         left=0.4in,
+%         right=0.1in,
+%         top=0.8in,
+%         bottom=0.6in,
+% ]{geometry}
+% \geometry{a4paper, portrait}
+% \sloppy
+
+% \usepackage{graphicx}
+% \graphicspath{{images/}}
+
+% \usepackage{titling}
+% \renewcommand\maketitlehooka{\null\mbox{}\vfill}
+% \renewcommand\maketitlehookd{\vfill\null}
+% \makeatletter
+% \def\@seccntformat#1{%
+%   \expandafter\ifx\csname c@#1\endcsname\c@section\else
+%   \csname the#1\endcsname\quad
+%   \fi}
+% \makeatother
+
+% \newcommand{\subtitle}[1]{%
+%   \posttitle{%
+%     \par\end{center}
+%     \begin{center}\LARGE#1\end{center}
+%     \vskip0.5em}%
+% }
+
+% % macro for centering title in the middle of the page
+% \author{\eng{Author Name}}
+
+% % macro for title page 
+% \newcommand{\addtitle}{\begin{titlingpage} \maketitle \noindent
+%     \F{Document typeset in \LaTeX \textsuperscript{\copyright} Author Name \\
+%     Contact: author@email.com}{lmr} \end{titlingpage} 
+%     \pagestyle{fancy}
+%     \fancyhf{}
+
+%     % macro for header
+%     \rhead{\eng{Tamil}}
+
+%     % macro for footer
+%     \lfoot{\eng{Author Name}}
+%     \cfoot{}
+%     \rfoot{\eng{Page \thepage}}
+% }
+
+% % macro for heading with underlined centered text
+% \usepackage{stackmacros}
+% \newcommand{\heading}[1]{
+%     \begin{center}
+%         \item \Huge \section{#1}
+%     \end{center}
+% }
+% \newcommand{\subheading}[1]{
+%          \subsection{\BU{#1}}
+% }
+% \newcommand{\subsubheading}[1]{
+%     \subsubsection{\BU{#1}}
+% }
+% \usepackage{etoolbox}
+% \AtBeginEnvironment{quote}{\raggedright}
+
+% % counter macros
+% \newcounter{mycounter}
+% \newcommand\countr{\addtocounter{mycounter}{1}\themycounter}
+% \newcommand\resetcountr{\setcounter{mycounter}{0}}
+% % tamil phonetics guide
+% \newcommand{\phoneticsguide}{
+% \newpage
+% \section{\Huge Tamil Phonetics Pronunciation Guide}
+% \Large
+% \begin{center}
+%     \begin{tabular}{ |r|l|c|r|l| c|r|l| c|r|l| c|r|l| } 
+%     \hline
+%     \B{Word} & \B{Sound} & & \B{Word} & \B{Sound} & & \B{Word} & \B{Sound} & & \B{Word} & \B{Sound} & & \B{Word} & \B{Sound} \\
+%     \hline
+%     \B{க} & Ka & & \B{ச} & Cha& & \B{ட} & Ta & & \B{த} & Tha & & \B{ஷ} & Sha \\ 
+%     \y{க}{2} & KHa &  & \y{ச}{2} & ChHa& &  \y{ட}{2} & Tta &  & \y{த}{2} & ThHa & & \B{ஶ} & ShHa \\ 
+%     \y{க}{3} & Ga &  & \y{ச}{3} & Jha& &  \y{ட}{3} & Da &  & \y{த}{3} & Dha & & &\\ 
+%     \y{க}{4} & GHa  & & \y{ச}{4} & JhHa & &  \y{ட}{4} & Dda  & & \y{த}{4} & DhHa & & &\\    
+%     \hline
+%     \end{tabular}
+% \end{center}
+% }
+
+% % shortcut macros for writing in English
+% \newcommand{\A}{a}
+% \newcommand{\e}{e}
+% \newcommand{\oh}{o}
+% \newcommand{\aaa}{aa}
+% \newcommand{\ah}{ah}
+% \newcommand{\am}{am}
+% \newcommand{\Pa}{pa}
+% \newcommand{\ta}{ta}
+% \newcommand{\eh}{eh}
+% \newcommand{\teh}{teh}
+% \newcommand{\she}{she}
+% \newcommand{\eva}{eva}
+% \newcommand{\bha}{bha}
+% \newcommand{\sho}{sho}
+% \newcommand{\tHe}{The}
+% \newcommand{\an}{an}
+% \newcommand{\ee}{ee}
+% \newcommand{\he}{he}
+% \newcommand{\ga}{ga}
+% \newcommand{\oo}{oo}
+% \newcommand{\Ko}{Ko}
+% \newcommand{\lo}{lo}
+% \newcommand{\Lo}{Lo}
+% \newcommand{\ma}{ma}
+% \newcommand{\na}{na}
+% \newcommand{\me}{me}
+% \newcommand{\ve}{ve}
+% \newcommand{\nE}{ne}
+% \newcommand{\re}{re}
+% \newcommand{\de}{de}
+% \newcommand{\De}{De}
+% \newcommand{\mo}{mo}
+% \newcommand{\no}{no}
+% \newcommand{\dO}{do}
+% \newcommand{\ha}{ha}
+% \newcommand{\ki}{ki}
+% \newcommand{\ya}{ya}
+% \newcommand{\ye}{ye}
+% \newcommand{\bh}{bh}
+% \newcommand{\N}{n}
+% \newcommand{\ch}{ch}
+% \newcommand{\kh}{kh}
+% \newcommand{\Ch}{Ch}
+% \newcommand{\sh}{sh}
+% \newcommand{\ksh}{ksh}
+% \newcommand{\Bh}{Bh}
+% \newcommand{\Th}{th}
+% \newcommand{\T}{t}
+% \newcommand{\G}{g}
+% \newcommand{\dhh}{dh}
+% \newcommand{\Dh}{Dh}
+
+% % Variadic Macros for Slokas
+
+% % Slokas with 1 lines
+% \newcommand{\SlokaStrayLarge}[1]{\SlokaStray{#1}{\LARGE}}
+% \newcommand{\SlokaStrayHuge}[1]{\SlokaStray{#1}{\huge}}
+% \newcommand{\SlokaStray}[2]{
+%         \begin{quote}
+%             #2
+%             #1 \\ \vspc
+%         \end{quote}
+% }
+
+% % Slokas with 4 lines
+% \newcommand{\SlokaLarge}[4]{\Sloka{#1}{#2}{#3}{#4}{\LARGE}}
+% \newcommand{\SlokaHuge}[4]{\Sloka{#1}{#2}{#3}{#4}{\huge}}
+% \newcommand{\Sloka}[5]{
+%     \begin{quote}
+%         #5
+%         #1 \\
+%         #2 \\
+%         #3 \\
+%         #4
+%         || ||  % uncomment this to track sloka number
+%     \end{quote}
+% }
+
+% % Slokas with 5 lines
+% \newcommand{\SlokaHeaderLarge}[5]{\SlokaHeader{#1}{#2}{#3}{#4}{#5}{\LARGE}}
+% \newcommand{\SlokaHeaderHuge}[5]{\SlokaHeader{#1}{#2}{#3}{#4}{#5}{\huge}}
+% \newcommand{\SlokaHeader}[6]{
+%     \begin{quote}
+%         #6
+%         \U{#1} \\
+%         #2 \\
+%         #3 \\
+%         #4 \\
+%         #5
+%         || ||  %uncomment this to track sloka number
+%     \end{quote}
+% }
