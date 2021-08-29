@@ -29,9 +29,10 @@
 
 % option to add vertical spacing
 \newcommand{\novspace}{\vspace*{-2.0cm}}
+\newcommand{\ospc}[1][1pt]{\rule[\normalbaselineskip]{0pt}{1pt}}
 \newcommand{\vspc}[1][2pt]{\rule[\normalbaselineskip]{0pt}{2pt}}
 \newcommand{\sspc}[1][2pt]{\rule[\normalbaselineskip]{0pt}{5pt}}
-\newcommand{\dspc}[1][2pt]{\rule[\normalbaselineskip]{0pt}{12pt}}
+\newcommand{\dspc}[1][2pt]{\rule[\normalbaselineskip]{0pt}{10pt}}
 \newcommand{\hspc}{\space \space}
 \newcommand{\dash}{\fontdimen2\font=0.4em— }
 \newcommand{\dsh}{\fontdimen2\font=0.4em- }
@@ -178,7 +179,7 @@
 \newcommand{\eva}{\y{eva}{-----}}
 \newcommand{\bha}{\y{{\bh}a}{-----}}
 \newcommand{\sho}{\y{{\sh}o}{-----}}
-\newcommand{\tHe}{\y{{\Th}e}{-----}}
+\newcommand{\tHe}{\y{{\tH}e}{-----}}
 \newcommand{\an}{\y{an}{---}}
 \newcommand{\An}{\y{An}{---}}
 \newcommand{\he}{\y{he}{---}}
@@ -191,8 +192,11 @@
 \newcommand{\va}{\y{va}{---}}
 \newcommand{\ya}{\y{ya}{---}}
 \newcommand{\ee}{\y{ee}{---}}
-\newcommand{\ii}{\y{i}{---}}
+\newcommand{\ii}{\y{i}{--}}
 \newcommand{\ri}{\y{ri}{---}}
+\newcommand{\ai}{\y{ai}{---}}
+\newcommand{\di}{\y{di}{---}}
+\newcommand{\nI}{\y{ni}{---}}
 \newcommand{\me}{\y{me}{---}}
 \newcommand{\ve}{\y{ve}{---}}
 \newcommand{\nE}{\y{ne}{---}}
@@ -208,25 +212,30 @@
 \newcommand{\no}{\y{no}{---}}
 \newcommand{\dO}{\y{do}{---}}
 \newcommand{\ho}{\y{ho}{---}}
+\newcommand{\Yo}{\y{Yo}{---}}
 \newcommand{\ki}{\y{ki}{---}}
 \newcommand{\ye}{\y{ye}{---}}
 \newcommand{\bh}{\x{bh}{•}}
-\newcommand{\N}{\x{n}{•}}
-\newcommand{\ch}{\x{ch}{•}}
-\newcommand{\kh}{\x{kh}{•}}
-\newcommand{\Ch}{\x{Ch}{•}}
-\newcommand{\sh}{\x{sh}{•}}
-\newcommand{\ksh}{\x{ksh}{•}}
 \newcommand{\Bh}{\x{Bh}{•}}
-\newcommand{\Th}{\x{th}{•}}
-\newcommand{\T}{\x{t}{•}}
-\newcommand{\G}{\x{g}{•}}
-\newcommand{\dhh}{\x{dh}{•}}
+\newcommand{\ch}{\x{ch}{•}}
+\newcommand{\Ch}{\x{Ch}{•}}
+\newcommand{\dH}{\x{dh}{•}}
 \newcommand{\Dh}{\x{Dh}{•}}
+\newcommand{\gh}{\x{gh}{•}}
+\newcommand{\G}{\x{g}{•}}
+\newcommand{\kh}{\x{kh}{•}}
+\newcommand{\N}{\x{n}{•}}
+\newcommand{\ph}{\x{ph}{•}}
+\newcommand{\sh}{\x{sh}{•}}
+\newcommand{\Sh}{\x{Sh}{•}}
+\newcommand{\ksh}{\x{ksh}{•}}
+\newcommand{\tH}{\x{th}{•}}
+\newcommand{\T}{\x{t}{•}}
+\newcommand{\ou}{\y{ou}{---}}
 
 % Variadic Macro for Slokas
 \newcount\linenum
-\newcommand{\GobbleListArg}[1]{\advance\linenum by 1 \\ \vspc \ifodd \number\linenum \dspc \else \sspc \fi #1\SlokaLine}
+\newcommand{\GobbleListArg}[1]{\advance\linenum by 1 \\ \ospc \ifodd \number\linenum \dspc \else \sspc \fi #1\SlokaLine}
 \newcommand{\SlokaLine}{\csname @ifnextchar\endcsname\bgroup{\GobbleListArg}{\space \fontdimen2\font=0.3em ||\space\countr\space|| \\ \vspc \end{quote}}}
 \newcommand{\Sloka}[2]{#2 \fontdimen2\font=0.8em \linenum=1 \begin{quote} #1\SlokaLine}
 \newcommand{\SlokaHeader}[3]{#3 \BU{#1} \Sloka{#2}{#3}}
